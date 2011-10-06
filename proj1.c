@@ -154,7 +154,7 @@ int main (void)
 
 
 
-//		Child process
+//		Child process //
 void sChild(int id, gvpipe_t fd[], int N) {
 
 	char *fileName;
