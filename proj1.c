@@ -1,3 +1,10 @@
+/**
+* Sari Rahal
+* Project 1
+* Oct 6, 2011
+*/
+
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -23,7 +30,7 @@ int compare (const void * a, const void * b);
 int main (void) 
 {
     gvpipe_t *pip;
-    pid_t who;
+    pid_t reffrencing;
     int numFiles,k;
     char input[100];     
     	
@@ -56,10 +63,10 @@ int main (void)
     
     for (k = 0; k < numFiles; k++) 
 	{
-        	who = fork ();
+        	reffrencing = fork ();
 		int stat;
         	wait (&stat);
-        	if (who == 0) 
+        	if (reffrencing == 0) 
 		{
 			sChild(k, pip, numFiles);
 			exit (0);           
